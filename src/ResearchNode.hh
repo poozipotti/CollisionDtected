@@ -14,7 +14,7 @@ class ResearchNode{
     protected:
         class FailState{
             public:
-            FailState(string _failText,string _fixText, float _time, vector<ResearchNode *> _dependecies);
+            FailState();
             int getChance(); /*out of 100*/
             int getTime();
             bool ignorable; /*failstates at the end of the process cannot be ignored*/
@@ -29,7 +29,7 @@ class ResearchNode{
         vector<FailState *> ignoredFailures;
         vector<int> timesToFailures;
     public:
-        ResearchNode(string _name,string _description,float completionTime); //times are in percent of the total time
+        ResearchNode();
         bool CheckFailure(int); /*failures are checked at CertainIntervals, i is the place of the failure in the list*/
         void addFailState(string failText,string fixText, int timeStart, int timeEnd, vector<ResearchNode *> dependecies);/*dependecies must be added before FailStates!!*/
         void complete();

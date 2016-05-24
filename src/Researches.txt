@@ -1,6 +1,27 @@
-#all Researches must be added first
-#format is name, dessciption,completionTime
-#all failures are added next 
-#format is Research to be added to name, failureText,fixedText, timeStart, time to be activated and then all the dependecies
+##format is name, description,completionTime(as a porportion of total time)
+    Failure name, time until completion, time to be activated (after the research has started)
+        Failure text
+        Specific fix text
+        General fix text
+        Dependency1 name 
+        Dependency2 name
+##
 
-:qa
+AdvancedAlloys "These advanced alloys will allow for stronger structers" .2  #starting technology no failures
+
+AdvancedFuels "These advanced fuels will last longer and burn hotter" .2  #starting technology no failures
+
+AdvancedComputing "better computing power is needed for many different technologies" .1  #starting technology no failures
+
+LifeSupportStructers "these life support structers are needed to survive in inhospitable conditions" .3
+    NeedBetterComputers .2 .1
+        "Our scientists cannot figure out how to create a life support system without a better sytem to monitor vitals" 
+        "Scientists have managed to find a better way to distrubute nutrients that does not have to be monitored so closesly"
+        "Our computing power is now at a point scientists can use it to monitor the system"
+        AdvancedComputing 
+    CannotCreateNanostructure
+        "Our scientists cannot create the nanostructors needed to allow humans to connect to life support system"
+        "A new Geometry of these structures can be created with tradional materials"
+        "more advanced metal alloys have allowed the "
+        AdvancedAlloys
+    
