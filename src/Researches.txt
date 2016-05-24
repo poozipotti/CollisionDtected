@@ -1,0 +1,6 @@
+#all Researches must be added first
+#format is name, dessciption,completionTime
+#all failures are added next 
+#format is Research to be added to name, failureText,fixedText, timeStart, time to be activated and then all the dependecies
+
+:qa

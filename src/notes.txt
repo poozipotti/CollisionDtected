@@ -1,0 +1,40 @@
+What does research do:
+allows buldings to be built
+gives older buildings new features
+speed up economy or research
+
+overall game design goals:
+Money can be used to speed up research but you must also use it for building
+
+should research be able to speed up research signifigantly?
+    the point of the game is risk and if this is the case than instead of taking risk
+
+    every game will start out the same way, research should not speed up research
+    but hidden bonuses may speed up other researches
+    
+    anyway what should the first research be (minimum viable product!!)
+        giant space Ship!
+            work from big to small
+                
+each research relies on several others, recurse through and find a failure and it will bubble up through
+    example: didnt invest in farming -> people starve on generation ship -> ship arrives everyone dead
+    example: telescope didn't fins  planet -> ship wanders endlessly -> your people become a strange 
+            race of ship people doomed as their ship slowly fails. 
+
+Big Ship-> FTL drive or Cryofreeze or Generation Ship  depending on what researches you have done, changes the nature of the ship
+    FTL drive -> advanced energy management &
+    Cryofreeze ->
+    Generation Ship ->
+
+
+
+
+Programming wise:
+    researches are added as dependencies to other researches
+        parent researches & Buildings hold depenencies
+            Buildings hold scenarios (factory exploding people starving etc. and it will randomly roll a scenario and check to see if researches prevent it)
+            no food in one game could be survival but everyone resorts to cannabilism or everyone dies before they arrive, make it fun!!
+            
+            Researches don't often fail, the are like building plans, but they will certain time (your sicentists cannot figure out how to hold enough fuel,
+            tell them to keep trying to figure it out or make a new type of fuel(different research) keep trying
+            is a random hidden value, it is a gamble...
